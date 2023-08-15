@@ -1,0 +1,1 @@
+export const bucket_name = "635948890580-bucket-ap-south-1"
