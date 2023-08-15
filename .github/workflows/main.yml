@@ -19,6 +19,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+      - name: Install aws cdk
+        run: 
+          npm install aws-cdk-lib
       - name: install NPM dependencies
         run: |
           npm install
