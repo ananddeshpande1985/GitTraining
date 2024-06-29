@@ -1,7 +1,11 @@
 name: action
+env:
+    user: anand
+    password: pass
+
 jobs:
     print_env:
         runs_on: ubuntu-latest
         steps: 
             - name: print env
-              run: echo "${{env}}"
+              run: echo "${{ env.user }}"
