@@ -4,5 +4,11 @@ jobs:
   dump_context_to_log:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout the action
+        uses: actions/checkout@v4
+        with: 
+          repository: ananddeshpande1985/GitTraining
+          path: GitTraining
+
       - name: Dump Github Context
         uses: ./github/actions
