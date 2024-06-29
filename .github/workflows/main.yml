@@ -11,4 +11,4 @@ jobs:
           path: GitTraining
 
       - name: Dump Github Context
-        uses: ./github/actions
+        uses: ./.github/actions
