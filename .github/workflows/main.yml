@@ -9,6 +9,9 @@ jobs:
         with: 
           repository: ananddeshpande1985/GitTraining
           path: GitTraining
+      - name: print the current dir
+        run: pwd
+          
 
       - name: Dump Github Context
-        uses: ./.github/actions
+        uses: ./GitTraining/.github/actions
