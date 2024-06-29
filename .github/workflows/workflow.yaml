@@ -1,9 +1,0 @@
-- name: calling workflow
-
-jobs:
-  :
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: call custom action 
-        uses: ./.github/actions
