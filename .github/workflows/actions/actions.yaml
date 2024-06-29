@@ -1,0 +1,7 @@
+name: action
+jobs:
+    print_env:
+        runs_on: ubuntu-latest
+        steps: 
+            - name: print env
+              run: echo "${{env}}"
