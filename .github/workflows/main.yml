@@ -1,5 +1,6 @@
 name: Build
-on: push
+on: 
+  workflow_dispatch:
 
 jobs:
   build:
@@ -10,13 +11,13 @@ jobs:
         run: |
           mkdir ${{ runner.temp }}/build_logs
           echo "Logs from building" > ${{ runner.temp }}/build_logs/build.logs
-          exit 1
+          exit 0
   deploy: 
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Upload logs on fail
-        if: ${{ failure() }}
+        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
          name: Build failure logs
